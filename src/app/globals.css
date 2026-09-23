@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --void: #0E1013;
+  --panel: #171A1E;
+  --panel-raised: #1D2126;
+  --line: #2A2F36;
+  --line-bright: #3A414A;
+  --copper: #D98B4F;
+  --copper-bright: #F2A567;
+  --copper-dim: #8A5A34;
+  --ink: #E7E5E0;
+  --ink-dim: #9A9691;
+  --ink-faint: #5E5B57;
+  --good: #7FB88A;
+}
+
+@theme inline {
+  --color-void: var(--void);
+  --color-panel: var(--panel);
+  --color-panel-raised: var(--panel-raised);
+  --color-line: var(--line);
+  --color-line-bright: var(--line-bright);
+  --color-copper: var(--copper);
+  --color-copper-bright: var(--copper-bright);
+  --color-copper-dim: var(--copper-dim);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-ink-faint: var(--ink-faint);
+  --color-good: var(--good);
+  --font-display: var(--font-instrument);
+  --font-mono: var(--font-jbmono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--void);
+  color: var(--ink);
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--copper);
+  color: var(--void);
+}
+
+:focus-visible {
+  outline: 2px solid var(--copper-bright);
+  outline-offset: 2px;
+}
+
+.font-mono-cmd {
+  font-family: var(--font-mono), ui-monospace, "SF Mono", monospace;
+}
+
+@keyframes caret-blink {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-2%, 1.5%); }
+  100% { transform: translate(0, 0); }
+}
