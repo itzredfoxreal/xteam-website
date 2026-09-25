@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { CircuitBackground } from "./CircuitBackground";
 import { Terminal } from "./Terminal";
 
-const BADGES = ["Fabric 26.2", "Java 25", "v1.0.9", "MIT License"];
+const BADGES = ["Fabric 26.2", "Java 25", "v1.1.0", "MIT License"];
 
 export function Hero() {
   return (
@@ -44,13 +44,13 @@ export function Hero() {
           >
             <motion.a
               id="download"
-              href="/xteam-1.0.9.jar"
+              href="/xteam-1.1.0.jar"
               download
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", bounce: 0, duration: 0.25 }}
               className="rounded-lg bg-copper px-5 py-3 text-sm font-semibold text-void shadow-[0_0_30px_-10px_rgba(217,139,79,0.6)]"
             >
-              Download xteam-1.0.9.jar
+              Download xteam-1.1.0.jar
             </motion.a>
             <motion.a
               href="#commands"
